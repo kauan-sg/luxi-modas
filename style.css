@@ -1,0 +1,56 @@
+html, body {
+    height: 100%;
+    margin: 0; 
+    background-color: rgb( 188, 195, 205);
+    overflow: hidden;
+}
+body {
+    background-image: url('logoloja.jpeg');
+    background-size: 50% 50%;  
+    background-position: center center;  
+    background-repeat: no-repeat; 
+}
+.insta 
+{
+   position: fixed;
+   top: 93%;
+   left: 80%;
+   width: 30%;
+   height: 300%;
+   font-size: 200%;
+}
+.container
+    {
+        display: flex;
+       
+        width: 100%;
+        height: 20%; 
+        }
+.but
+{
+    position: fixed;
+    top: 120px;
+    left: 42%;
+}
+.tit
+{
+    position: fixed;
+    left: 37%;
+}
+.botaochat
+{
+background-color: rgb(121, 129, 148);
+width: 200px; 
+height: 50px; 
+padding: 10px 20px; 
+font-size: 16px; 
+border-radius: 15px;
+}
+.logoinsta
+{
+    position: fixed;
+    top: 95%;
+    left: 78%;
+    height: 23px;
+    width: 23px;
+}

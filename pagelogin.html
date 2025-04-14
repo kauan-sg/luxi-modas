@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagelogin</title>
+    <link rel="stylesheet" href="pagelogin.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Container para o formulário à esquerda -->
+        <div class="form-container">
+            <form id="loginForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" placeholder="(XX) XXXXX-XXXX" required><br><br>
+
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+
+        <!-- Container para o scroll com as imagens à direita -->
+        <div class="image-scroll">
+            <img src="file:///home/tempadmin/%C3%81rea%20de%20Trabalho/kauan_programa%C3%A7%C3%A3o/lojamamae/%F0%9D%90%8B%F0%9D%90%94%F0%9D%90%97%F0%9D%90%88%20%F0%9D%90%8C%F0%9D%90%8E%F0%9D%90%83%F0%9D%90%80%F0%9D%90%92%20(@luximodas_)%20%E2%80%A2%20Fotos%20e%20v%C3%ADdeos%20do%20Instagram_files/469846658_17868130230266404_4750111597523909662_n.jpg" alt="Imagem 1">
+            <img src="file:///home/tempadmin/%C3%81rea%20de%20Trabalho/kauan_programa%C3%A7%C3%A3o/lojamamae/%F0%9D%90%8B%F0%9D%90%94%F0%9D%90%97%F0%9D%90%88%20%F0%9D%90%8C%F0%9D%90%8E%F0%9D%90%83%F0%9D%90%80%F0%9D%90%92%20(@luximodas_)%20%E2%80%A2%20Fotos%20e%20v%C3%ADdeos%20do%20Instagram_files/469857392_17868131361266404_707641898976682514_n.jpg" alt="Imagem 2">
+            <img src="file:///home/tempadmin/%C3%81rea%20de%20Trabalho/kauan_programa%C3%A7%C3%A3o/lojamamae/%F0%9D%90%8B%F0%9D%90%94%F0%9D%90%97%F0%9D%90%88%20%F0%9D%90%8C%F0%9D%90%8E%F0%9D%90%83%F0%9D%90%80%F0%9D%90%92%20(@luximodas_)%20%E2%80%A2%20Fotos%20e%20v%C3%ADdeos%20do%20Instagram_files/469858676_17868130131266404_8413833468666265190_n.jpg" alt="Imagem 3">
+            <img src="file:///home/tempadmin/%C3%81rea%20de%20Trabalho/kauan_programa%C3%A7%C3%A3o/lojamamae/%F0%9D%90%8B%F0%9D%90%94%F0%9D%90%97%F0%9D%90%88%20%F0%9D%90%8C%F0%9D%90%8E%F0%9D%90%83%F0%9D%90%80%F0%9D%90%92%20(@luximodas_)%20%E2%80%A2%20Fotos%20e%20v%C3%ADdeos%20do%20Instagram_files/469876063_17868130017266404_7259545585948590865_n.jpg" alt="Imagem 4">
+            <img src="file:///home/tempadmin/%C3%81rea%20de%20Trabalho/kauan_programa%C3%A7%C3%A3o/lojamamae/%F0%9D%90%8B%F0%9D%90%94%F0%9D%90%97%F0%9D%90%88%20%F0%9D%90%8C%F0%9D%90%8E%F0%9D%90%83%F0%9D%90%80%F0%9D%90%92%20(@luximodas_)%20%E2%80%A2%20Fotos%20e%20v%C3%ADdeos%20do%20Instagram_files/469916163_17868130611266404_3830683508247647529_n.jpg" alt="Imagem 5">
+        </div>
+    </div>
+
+    <img src="logoloja.jpeg" width="10%" height="30%" class="ll">
+
+    <script>
+        // Função para contar as pessoas que acessaram a página
+        function countVisitors() {
+            let visitCount = localStorage.getItem('visitCount') || 0;
+            visitCount = parseInt(visitCount) + 1;
+            localStorage.setItem('visitCount', visitCount);
+            console.log('Número de visitantes: ' + visitCount);
+        }
+
+        // Chama a função para contar visitantes
+        countVisitors();
+
+        // Função para validar o formulário e redirecionar
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+
+            // Verificar se os campos estão preenchidos corretamente
+            if (nome && telefone) {
+                // Redireciona para outra página (substitua 'pagina-destino.html' pelo seu URL)
+                window.location.href = 'inicialpage.html';
+            } else {
+                alert('Por favor, preencha todos os campos!');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
